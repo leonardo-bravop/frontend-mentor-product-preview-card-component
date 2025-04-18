@@ -25,14 +25,16 @@ $green-700-color: hsl(158, 42%, 18%);
 body {
     font-family: sans-serif;
     background-color: $cream-color;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
 }
 
 .product-card {
     display: flex;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     flex-direction: column;
     background-color: $white-color;
     width: min-content;
