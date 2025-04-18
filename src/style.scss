@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "Fraunces";
+    src: url("./assets/fonts/Fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+    font-display: swap;
+}
+
+$cream-color: hsl(30, 38%, 92%);
+$black-color: hsl(212, 21%, 14%);
+$grey-color: hsl(228, 12%, 48%);
+$white-color: hsl(0, 0%, 100%);
+
+$green-500-color: hsl(158, 36%, 37%);
+$green-700-color: hsl(158, 42%, 18%);
+
+body {
+    font-family: sans-serif;
+    background-color: $cream-color;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: $white-color;
+    width: min-content;
+    margin: 1.75rem auto;
+    border-radius: 1rem;
+    color: $grey-color;
+
+    .image {
+        height: 240px;
+    }
+
+    .image img{
+        height: inherit;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .type {
+        font-family: "Montserrat";
+        font-variation-settings: "wght" 700;
+        font-size: 0.75rem;
+        letter-spacing: 0.32rem;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        font-family: "Fraunces";
+        font-variation-settings: "wght" 700;
+        line-height: 100%;
+        font-size: 2rem;
+        margin-top: 0.75rem;
+        margin-bottom: 1rem;
+        color: $black-color;
+    }
+
+    .description {
+        padding: 1.375rem 1.5rem;
+
+        p {
+            font-family: "Montserrat";
+            font-variation-settings: "wght" 500;
+            letter-spacing: 0;
+            font-size: 0.875rem;
+            line-height: 1.43rem;
+        }
+
+        .price {
+            display: flex;
+            gap: 1.25rem;
+            align-items: center;
+            margin-top: 1.25rem;
+            margin-bottom: 1rem;
+
+            .main-price {
+                font-family: "Fraunces";
+                font-variation-settings: "wght" 700;
+                font-size: 2rem;
+                color: $green-500-color;
+            }
+
+            .original-price {
+                font-family: "Montserrat";
+                font-size: 0.8125rem;
+                text-decoration: line-through;
+            }
+        }
+
+        .cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.625rem;
+            width: 100%;
+            height: 3rem;
+            border: none;
+            border-radius: 0.5rem;
+            background-color: $green-500-color;
+            padding: 0.875rem;
+            font-family: "Montserrat";
+            font-variation-settings: "wght" 700;
+            font-size: 0.875rem;
+            color: $white-color;
+
+            .icon {
+                height: 1.2rem;
+                fill: $white-color;
+            }
+        }
+    }
+}
