@@ -25,6 +25,7 @@ $green-700-color: hsl(158, 42%, 18%);
 body {
     font-family: sans-serif;
     background-color: $cream-color;
+    font-synthesis: none;
 }
 
 .product-card {
@@ -78,6 +79,7 @@ body {
     .type {
         font-family: "Montserrat";
         font-variation-settings: "wght" 700;
+        font-weight: 700;
         font-size: 0.75rem;
         letter-spacing: 0.32rem;
         text-transform: uppercase;
