@@ -92,6 +92,7 @@ body {
         }
 
         .cta {
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -111,6 +112,10 @@ body {
                 height: 1.2rem;
                 fill: $white-color;
             }
+        }
+
+        .cta:hover {
+            background-color: $green-700-color;
         }
     }
 }
