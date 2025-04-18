@@ -7,8 +7,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <main>
    <div class="product-card">
     <picture class="image">
-      <img src="${mobileSrc}" class="mobile-img">
-      <img src="${desktopSrc}" class="desktop-img">
+      <img src="${mobileSrc}" class="mobile-img" alt="product image">
+      <img src="${desktopSrc}" class="desktop-img" alt="product image">
     </picture>
     <div class="description">
       <span class="type">Perfume</span>
@@ -22,7 +22,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <span class="original-price">$169.99</span>
       </div>
       <button class="cta">
-        <img src="${cart}" class="icon"/>
+        <img src="${cart}" class="icon" alt="cart icon"/>
         <span>Add to Cart</span>
       </button>
     </div>
