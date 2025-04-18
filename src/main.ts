@@ -1,12 +1,14 @@
 import './style.scss';
 import mobileSrc from './assets/images/image-product-mobile.jpg'
+import desktopSrc from './assets/images/image-product-desktop.jpg'
 import cart from './assets/images/shopping-cart.svg'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <main>
    <div class="product-card">
     <picture class="image">
-      <img src="${mobileSrc}">
+      <img src="${mobileSrc}" class="mobile-img">
+      <img src="${desktopSrc}" class="desktop-img">
     </picture>
     <div class="description">
       <span class="type">Perfume</span>

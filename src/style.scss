@@ -18,9 +18,17 @@ $white-color: hsl(0, 0%, 100%);
 $green-500-color: hsl(158, 36%, 37%);
 $green-700-color: hsl(158, 42%, 18%);
 
+@mixin md {
+    @media (width >= 48rem) { @content }
+}
+
 body {
     font-family: sans-serif;
     background-color: $cream-color;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .product-card {
@@ -32,13 +40,37 @@ body {
     border-radius: 1rem;
     color: $grey-color;
 
-    .image {
-        height: 240px;
+    @include md {
+        flex-direction: row;
+        height: max-content;
+        margin: auto;
     }
 
-    .image img{
+    .image {
+        height: 240px;
+
+        @include md {
+            height: auto;
+        }
+    }
+
+    .image .mobile-img{
         height: inherit;
         border-radius: 1rem 1rem 0 0;
+
+        @include md {
+            display: none;
+        }
+    }
+
+    .image .desktop-img{
+        display: none;
+
+        @include md {
+            display: block;
+            width: 300px;
+            border-radius: 1rem 0 0 1rem;
+        }
     }
 
     .type {
@@ -57,10 +89,22 @@ body {
         margin-top: 0.75rem;
         margin-bottom: 1rem;
         color: $black-color;
+
+        @include md {
+            margin: 1.375rem 0;
+        }
     }
 
     .description {
+        position: relative;
         padding: 1.375rem 1.5rem;
+
+        @include md {
+            padding: 2rem;
+            width: 14.75rem;
+            display: flex;
+            flex-direction: column;
+        }
 
         p {
             font-family: "Montserrat";
@@ -68,6 +112,10 @@ body {
             letter-spacing: 0;
             font-size: 0.875rem;
             line-height: 1.43rem;
+
+            @include md {
+                margin: 0;
+            }
         }
 
         .price {
@@ -76,6 +124,11 @@ body {
             align-items: center;
             margin-top: 1.25rem;
             margin-bottom: 1rem;
+
+            @include md {
+                margin-top: 1.625rem;
+                margin-bottom: auto;
+            }
 
             .main-price {
                 font-family: "Fraunces";
@@ -107,6 +160,10 @@ body {
             font-variation-settings: "wght" 700;
             font-size: 0.875rem;
             color: $white-color;
+
+            @include md {
+                align-self: flex-end;
+            }
 
             .icon {
                 height: 1.2rem;
