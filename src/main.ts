@@ -28,7 +28,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <span class="main-price">$${productData.mainPrice}</span>
         <span class="original-price">$${productData.originalPrice}</span>
       </div>
-      <button class="cta">
+      <button class="cta" aria-label="Add product to cart">
         <img src="${cart}" class="icon" alt="cart icon"/>
         <span>Add to Cart</span>
       </button>
