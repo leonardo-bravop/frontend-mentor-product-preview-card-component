@@ -1,4 +1,4 @@
-import './style.scss';
+import './sass/main.scss';
 import mobileSrc from './assets/images/image-product-mobile.jpg'
 import desktopSrc from './assets/images/image-product-desktop.jpg'
 import cart from './assets/images/shopping-cart.svg'
