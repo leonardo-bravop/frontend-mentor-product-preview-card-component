@@ -26,16 +26,14 @@ body {
     font-family: sans-serif;
     background-color: $cream-color;
     font-synthesis: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
 }
 
 .product-card {
     display: flex;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     flex-direction: column;
     background-color: $white-color;
     height: fit-content;
