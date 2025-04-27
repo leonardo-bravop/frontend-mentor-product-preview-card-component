@@ -16,10 +16,12 @@ const productData = {
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <main>
    <div class="product-card">
-    <picture class="image">
-      <img src="${productData.mobileSrc}" class="mobile-img" alt="${productData.name}">
-      <img src="${productData.desktopSrc}" class="desktop-img" alt="${productData.name}">
+    <picture class="product-image">
+      <source media="(min-width: 48rem)" srcset="${productData.desktopSrc}">
+      <img src="${productData.mobileSrc}" alt="${productData.name}">
     </picture>
+
+
     <div class="description">
       <span class="type">${productData.type}</span>
       <h1>${productData.name}</h1>

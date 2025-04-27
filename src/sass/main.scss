@@ -28,7 +28,7 @@ body {
         margin: auto;
     }
 
-    .image {
+    .product-image {
         height: 240px;
 
         @include md {
@@ -36,20 +36,12 @@ body {
         }
     }
 
-    .image .mobile-img{
+    .product-image img{
+        display: block;
         height: inherit;
         border-radius: 1rem 1rem 0 0;
 
         @include md {
-            display: none;
-        }
-    }
-
-    .image .desktop-img{
-        display: none;
-
-        @include md {
-            display: block;
             width: 300px;
             border-radius: 1rem 0 0 1rem;
         }
