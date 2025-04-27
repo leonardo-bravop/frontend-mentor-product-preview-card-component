@@ -9,3 +9,13 @@
     src: url("../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
     font-display: swap;
 }
+
+@mixin font-fraunces($weight: 400) {
+    font-family: "Fraunces";
+    font-variation-settings: "wght" #{$weight};
+}
+
+@mixin font-montserrat($weight: 400) {
+    font-family: "Montserrat";
+    font-variation-settings: "wght" #{$weight};
+}
